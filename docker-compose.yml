@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  app:
+    tty: true
+    build: .
+    working_dir: /app
+    volumes:
+      - type: bind
+        source: ./lib
+        target: /app/lib
+      - type: bind
+        source: ./priv
+        target: /app/priv
+    depends_on:
+      - db
+
+  db:
+    image: "postgres:12"
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - "repro-app-data:/var/lib/postgresql/data"
+
+volumes:
+  repro-app-data:
