@@ -1,4 +1,4 @@
-# Repro for [this thread](https://elixirforum.com/t/how-to-insert-an-empty-list-in-a-jsonb-column/32137)
+# Repro for [this thread](https://elixirforum.com/t/how-to-insert-an-empty-list-in-a-jsonb-column/32137) and [this related issue](https://github.com/elixir-ecto/ecto/issues/3324)
 
 ```sh
 git clone https://github.com/dorian-marchal/repro-empty-list-jsonb
